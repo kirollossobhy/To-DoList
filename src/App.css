@@ -1,20 +1,20 @@
 body {
   background-color: #000000;
   font-family: Arial, sans-serif;
-  
-  
+
+
 }
 
 h1 {
   width: 100%;
-  
+
   font-size: 50px;
   margin-bottom: 10px;
   text-align: center;
- font-family: fantasy;
- color: rgb(30, 162, 210);
- background-color: black;
- padding: 20px 0px;
+  font-family: fantasy;
+  color: rgb(30, 162, 210);
+  background-color: black;
+  padding: 20px 0px;
 }
 
 p {
@@ -34,7 +34,8 @@ li {
 button {
   width: 100%;
   padding: 20px;
-  background-color: rgb(30, 162, 210);
+  background-color: rgb(30, 162, 210); 
+  margin-bottom: 100px;
   color: white;
   font-size: 20px;
   border: none;
@@ -44,6 +45,7 @@ button {
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 
 .App {
   display: flex;
@@ -57,9 +59,10 @@ button {
   border: 1px solid black;
   padding: 100px 15px;
   border-radius: 20px 20px 0px 0px;
-  
+
   background-color: rgb(255, 255, 255);
 }
+
 .App-container {
   width: 100%;
   height: 100vh;
@@ -125,6 +128,17 @@ button {
   cursor: pointer;
 }
 
+.uncompleted {
+  color: white;
+  background-color: rgba(226, 48, 48, 0.753);
+  margin: 5px 0px;
+
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 .delete {
   color: white;
   background-color: rgb(255, 76, 5);
@@ -145,6 +159,30 @@ button {
   align-items: center;
 }
 
+
+.title[type="text"][type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 1px;
+  background-color: rgb(220, 220, 220);
+  border: 1px solid #000000;
+
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  box-sizing: border-box;
+}
+
+.desc[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: rgb(220, 220, 220);
+  border: 1px solid #000000;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 15px;
@@ -152,7 +190,6 @@ input[type="text"] {
   margin-bottom: 20px;
   background-color: rgb(220, 220, 220);
   border: 1px solid #000000;
-  
   border-radius: 8px;
   overflow: hidden;
   display: block;
@@ -168,55 +205,6 @@ input[type="text"] {
 
 .input-row button {
   width: 100%;
-}
+} 
 
-/* Desktop: place input and button inline */
-@media (min-width: 768px) {
-  .input-row {
-    flex-direction: row;
-    align-items: center;
-  }
 
-  .input-row input[type="text"] {
-    flex: 1 1 auto;
-    /* take remaining space */
-    margin-bottom: 0;
-    text-align: left;
-  }
-
-  .input-row button {
-    width: 160px;
-    /* fixed button width on desktop */
-    flex: 0 0 160px;
-  }
-
-  /* Desktop: display list items in a row with actions on the right */
-  .todo-container ul {
-    gap: 10px;
-  }
-
-  .todo-container .item {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .todo-container ul li {
-    display: block;
-    padding: 10px 12px;
-    margin: 0;
-    flex: 1 1 auto;
-    list-style-type: decimal;
-  }
-
-  /* show decimal numbering on desktop */
-  .todo-container ul {
-    list-style: decimal outside;
-    /* numbers outside content */
-    padding-left: 1.2em;
-  }
-
-  .todo-container .item>div:last-child {
-    justify-content: flex-end;
-  }
-}
